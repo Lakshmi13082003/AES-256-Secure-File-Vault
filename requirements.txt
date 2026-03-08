@@ -1,0 +1,32 @@
+⚙️ Installation & Usage
+
+1. Install Dependencies --> Ensure you have Python installed, then run:
+
+  pip install PySide6 cryptography
+
+2. Run the App
+
+  python vault_app.py
+
+3. Encrypting a File
+
+Enter a Master Password (e.g., MySecret123).
+
+Click "Encrypt File".
+
+Select your file. The original stays safe, and a new .enc file is created.
+
+4. Decrypting a File
+Enter the same Master Password.
+
+Click "Decrypt File".
+
+Select the .enc file and choose where to save the restored version.
+
+🛡️ Security Analysis
+
+Brute Force Resistance: By using 100,000 iterations of PBKDF2, the app makes "guessing" the password incredibly slow for attackers.
+
+Confidentiality: Even if an attacker steals your .enc file, they cannot see the content without the master password.
+
+Zero-Knowledge: The master password is never stored on disk. It only exists in your memory.
